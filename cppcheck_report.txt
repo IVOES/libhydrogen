@@ -1,0 +1,332 @@
+hydrogen.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 33 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+impl/common.h:300:12: warning: The address of local variable 'st' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/random/avr.h:31:21: note: Address of variable taken here.
+    hydro_hash_init(&st, ctx, NULL);
+                    ^
+impl/random/avr.h:31:21: note: Calling function 'hydro_hash_init', 1st argument '&st' value is lifetime=st
+    hydro_hash_init(&st, ctx, NULL);
+                    ^
+impl/hash.h:51:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=st
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'st' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/common.h:300:12: warning: The address of local variable 'st' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/hash.h:129:25: note: Address of variable taken here.
+    if (hydro_hash_init(&st, ctx, key) != 0 || hydro_hash_update(&st, in, in_len) != 0 ||
+                        ^
+impl/hash.h:129:25: note: Calling function 'hydro_hash_init', 1st argument '&st' value is lifetime=st
+    if (hydro_hash_init(&st, ctx, key) != 0 || hydro_hash_update(&st, in, in_len) != 0 ||
+                        ^
+impl/hash.h:51:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=st
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'st' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/common.h:300:12: warning: The address of local variable 'h_st' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/pwhash.h:29:21: note: Address of variable taken here.
+    hydro_hash_init(&h_st, ctx, master_key);
+                    ^
+impl/pwhash.h:29:21: note: Calling function 'hydro_hash_init', 1st argument '&h_st' value is lifetime=h_st
+    hydro_hash_init(&h_st, ctx, master_key);
+                    ^
+impl/hash.h:51:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=h_st
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'h_st' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/common.h:300:12: warning: The address of local variable 'st' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/sign.h:29:21: note: Address of variable taken here.
+    hydro_hash_init(&st, (const char *) zero, NULL);
+                    ^
+impl/sign.h:29:21: note: Calling function 'hydro_hash_init', 1st argument '&st' value is lifetime=st
+    hydro_hash_init(&st, (const char *) zero, NULL);
+                    ^
+impl/hash.h:51:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=st
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'st' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/common.h:300:12: warning: The address of local variable 'st' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/kdf.h:10:36: note: Address of variable taken here.
+    if (hydro_hash_init_with_tweak(&st, ctx, subkey_id, key) != 0) {
+                                   ^
+impl/kdf.h:10:36: note: Calling function 'hydro_hash_init_with_tweak', 1st argument '&st' value is lifetime=st
+    if (hydro_hash_init_with_tweak(&st, ctx, subkey_id, key) != 0) {
+                                   ^
+impl/hash.h:82:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=st
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'st' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/hash.h:16:42: warning: The address of local variable 'tc' might be accessed at non-zero index. [objectIndex]
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/random/avr.h:36:50: note: Address of variable taken here.
+        hydro_hash_update(&st, (const uint8_t *) &tc, sizeof tc);
+                                                 ^
+impl/random/avr.h:36:32: note: Calling function 'hydro_hash_update', 2nd argument '(const uint8_t*)&tc' value is lifetime=tc
+        hydro_hash_update(&st, (const uint8_t *) &tc, sizeof tc);
+                               ^
+impl/hash.h:16:42: note: The address of local variable 'tc' might be accessed at non-zero index.
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/hash.h:16:42: warning: The address of local variable 'tc' might be accessed at non-zero index. [objectIndex]
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/random/avr.h:41:50: note: Address of variable taken here.
+        hydro_hash_update(&st, (const uint8_t *) &tc, sizeof tc);
+                                                 ^
+impl/random/avr.h:41:32: note: Calling function 'hydro_hash_update', 2nd argument '(const uint8_t*)&tc' value is lifetime=tc
+        hydro_hash_update(&st, (const uint8_t *) &tc, sizeof tc);
+                               ^
+impl/hash.h:16:42: note: The address of local variable 'tc' might be accessed at non-zero index.
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/hash.h:16:42: warning: The address of local variable 'b' might be accessed at non-zero index. [objectIndex]
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/random/avr.h:45:50: note: Address of variable taken here.
+        hydro_hash_update(&st, (const uint8_t *) &b, sizeof b);
+                                                 ^
+impl/random/avr.h:45:32: note: Calling function 'hydro_hash_update', 2nd argument '(const uint8_t*)&b' value is lifetime=b
+        hydro_hash_update(&st, (const uint8_t *) &b, sizeof b);
+                               ^
+impl/hash.h:16:42: note: The address of local variable 'b' might be accessed at non-zero index.
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/x25519.h:149:37: warning: The address of local variable 'sixteen' might be accessed at non-zero index. [objectIndex]
+        hydro_x25519_limb_t mand = b[i];
+                                    ^
+impl/sign.h:81:30: note: Address of variable taken here.
+    hydro_x25519_mul(z2, z2, &sixteen, 1);
+                             ^
+impl/sign.h:81:30: note: Calling function 'hydro_x25519_mul', 3rd argument '&sixteen' value is lifetime=sixteen
+    hydro_x25519_mul(z2, z2, &sixteen, 1);
+                             ^
+impl/x25519.h:149:37: note: The address of local variable 'sixteen' might be accessed at non-zero index.
+        hydro_x25519_limb_t mand = b[i];
+                                    ^
+impl/random/avr.h:23:22: style: The scope of the variable 'a' can be reduced. [variableScope]
+    bool             a, b;
+                     ^
+impl/core.h:40:18: style: The scope of the variable 'x' can be reduced. [variableScope]
+    unsigned int x;
+                 ^
+impl/core.h:41:18: style: The scope of the variable 'b' can be reduced. [variableScope]
+    int          b;
+                 ^
+impl/core.h:42:18: style: The scope of the variable 'c' can be reduced. [variableScope]
+    int          c;
+                 ^
+impl/core.h:69:19: style: The scope of the variable 'c' can be reduced. [variableScope]
+    unsigned char c;
+                  ^
+impl/core.h:70:19: style: The scope of the variable 'c_alpha0' can be reduced. [variableScope]
+    unsigned char c_alpha0, c_alpha;
+                  ^
+impl/core.h:71:19: style: The scope of the variable 'c_num0' can be reduced. [variableScope]
+    unsigned char c_num0, c_num;
+                  ^
+impl/core.h:199:26: style: The scope of the variable 'c' can be reduced. [variableScope]
+    unsigned char        c;
+                         ^
+impl/core.h:203:26: style: The scope of the variable 'is_barrier' can be reduced. [variableScope]
+    size_t               is_barrier;
+                         ^
+impl/hash.h:6:20: style: The scope of the variable 'left' can be reduced. [variableScope]
+    size_t         left;
+                   ^
+impl/hash.h:7:20: style: The scope of the variable 'ps' can be reduced. [variableScope]
+    size_t         ps;
+                   ^
+impl/core.h:44:17: style: Unsigned expression 'bin_len' can't be negative so it is unnecessary to test it. [unsignedPositive]
+    if (bin_len >= SIZE_MAX / 2 || hex_maxlen <= bin_len * 2U) {
+                ^
+impl/core.h:168:19: style: Checking if unsigned expression 'blocksize' is less than zero. [unsignedLessThanZero]
+    if (blocksize <= 0U || max_buflen > INT_MAX) {
+                  ^
+impl/core.h:205:48: style: Checking if unsigned expression 'blocksize' is less than zero. [unsignedLessThanZero]
+    if (padded_buflen < blocksize || blocksize <= 0U) {
+                                               ^
+impl/secretbox.h:103:39: style: Variable 'state' is not assigned a value. [unassignedVariable]
+    _hydro_attr_aligned_(16) uint32_t state[gimli_BLOCKBYTES / 4];
+                                      ^
+impl/common.h:300:12: warning: The address of local variable 'st' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/random/ch32.h:20:21: note: Address of variable taken here.
+    hydro_hash_init(&st, ctx, NULL);
+                    ^
+impl/random/ch32.h:20:21: note: Calling function 'hydro_hash_init', 1st argument '&st' value is lifetime=st
+    hydro_hash_init(&st, ctx, NULL);
+                    ^
+impl/hash.h:51:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=st
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'st' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/hash.h:16:42: warning: The address of local variable 'r' might be accessed at non-zero index. [objectIndex]
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/random/ch32.h:26:51: note: Address of variable taken here.
+        hydro_hash_update(&st, (const uint32_t *) &r, sizeof r);
+                                                  ^
+impl/random/ch32.h:26:32: note: Calling function 'hydro_hash_update', 2nd argument '(const uint32_t*)&r' value is lifetime=r
+        hydro_hash_update(&st, (const uint32_t *) &r, sizeof r);
+                               ^
+impl/hash.h:16:42: note: The address of local variable 'r' might be accessed at non-zero index.
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/hash.h:16:42: warning: The address of local variable 'tmp8' might be accessed at non-zero index. [objectIndex]
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/pwhash.h:38:30: note: Address of variable taken here.
+    hydro_hash_update(&h_st, &tmp8, 1);
+                             ^
+impl/pwhash.h:38:30: note: Calling function 'hydro_hash_update', 2nd argument '&tmp8' value is lifetime=tmp8
+    hydro_hash_update(&h_st, &tmp8, 1);
+                             ^
+impl/hash.h:16:42: note: The address of local variable 'tmp8' might be accessed at non-zero index.
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/common.h:300:12: warning: The address of local variable 'state' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/kx.h:206:25: note: Address of variable taken here.
+    hydro_kx_init_state(&state, "Noise_Npsk0_hydro1");
+                        ^
+impl/kx.h:206:25: note: Calling function 'hydro_kx_init_state', 1st argument '&state' value is lifetime=state
+    hydro_kx_init_state(&state, "Noise_Npsk0_hydro1");
+                        ^
+impl/kx.h:154:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=state
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'state' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/common.h:300:12: warning: The address of local variable 'state' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/kx.h:233:25: note: Address of variable taken here.
+    hydro_kx_init_state(&state, "Noise_Npsk0_hydro1");
+                        ^
+impl/kx.h:233:25: note: Calling function 'hydro_kx_init_state', 1st argument '&state' value is lifetime=state
+    hydro_kx_init_state(&state, "Noise_Npsk0_hydro1");
+                        ^
+impl/kx.h:154:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=state
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'state' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/hash.h:16:42: warning: The address of local variable 'threads' might be accessed at non-zero index. [objectIndex]
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/pwhash.h:40:30: note: Address of variable taken here.
+    hydro_hash_update(&h_st, &threads, 1);
+                             ^
+impl/pwhash.h:40:30: note: Calling function 'hydro_hash_update', 2nd argument '&threads' value is lifetime=threads
+    hydro_hash_update(&h_st, &threads, 1);
+                             ^
+impl/hash.h:16:42: note: The address of local variable 'threads' might be accessed at non-zero index.
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/common.h:300:12: warning: The address of local variable 'st' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/random/esp32.h:18:21: note: Address of variable taken here.
+    hydro_hash_init(&st, ctx, NULL);
+                    ^
+impl/random/esp32.h:18:21: note: Calling function 'hydro_hash_init', 1st argument '&st' value is lifetime=st
+    hydro_hash_init(&st, ctx, NULL);
+                    ^
+impl/hash.h:51:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=st
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'st' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/hash.h:16:42: warning: The address of local variable 'r' might be accessed at non-zero index. [objectIndex]
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/random/esp32.h:24:51: note: Address of variable taken here.
+        hydro_hash_update(&st, (const uint32_t *) &r, sizeof r);
+                                                  ^
+impl/random/esp32.h:24:32: note: Calling function 'hydro_hash_update', 2nd argument '(const uint32_t*)&r' value is lifetime=r
+        hydro_hash_update(&st, (const uint32_t *) &r, sizeof r);
+                               ^
+impl/hash.h:16:42: note: The address of local variable 'r' might be accessed at non-zero index.
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/common.h:300:12: warning: The address of local variable 'st' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/random/nrf52832.h:16:21: note: Address of variable taken here.
+    hydro_hash_init(&st, ctx, NULL);
+                    ^
+impl/random/nrf52832.h:16:21: note: Calling function 'hydro_hash_init', 1st argument '&st' value is lifetime=st
+    hydro_hash_init(&st, ctx, NULL);
+                    ^
+impl/hash.h:51:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=st
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'st' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/random/nrf52832.h:32:29: style: Checking if unsigned expression 'remaining_bytes' is less than zero. [unsignedLessThanZero]
+        if (remaining_bytes <= 0) {
+                            ^
+impl/common.h:300:12: warning: The address of local variable 'st' might be accessed at non-zero index. [objectIndex]
+        dst[i] = 0;
+           ^
+impl/random/stm32.h:38:21: note: Address of variable taken here.
+    hydro_hash_init(&st, ctx, NULL);
+                    ^
+impl/random/stm32.h:38:21: note: Calling function 'hydro_hash_init', 1st argument '&st' value is lifetime=st
+    hydro_hash_init(&st, ctx, NULL);
+                    ^
+impl/hash.h:51:14: note: Calling function 'mem_zero', 1st argument 'state' value is lifetime=st
+    mem_zero(state, sizeof *state);
+             ^
+impl/common.h:300:12: note: The address of local variable 'st' might be accessed at non-zero index.
+        dst[i] = 0;
+           ^
+impl/hash.h:16:42: warning: The address of local variable 'r' might be accessed at non-zero index. [objectIndex]
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/random/stm32.h:52:51: note: Address of variable taken here.
+        hydro_hash_update(&st, (const uint32_t *) &r, sizeof r);
+                                                  ^
+impl/random/stm32.h:52:32: note: Calling function 'hydro_hash_update', 2nd argument '(const uint32_t*)&r' value is lifetime=r
+        hydro_hash_update(&st, (const uint32_t *) &r, sizeof r);
+                               ^
+impl/hash.h:16:42: note: The address of local variable 'r' might be accessed at non-zero index.
+            buf[state->buf_off + i] ^= in[i];
+                                         ^
+impl/random/windows.h:1:0: error: #include nested too deeply [preprocessorErrorDirective]
+#include <windows.h>
+^
+impl/random/unix.h:40:20: style: The scope of the variable 'readnb' can be reduced. [variableScope]
+    ssize_t        readnb;
+                   ^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
